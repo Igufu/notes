@@ -20,9 +20,9 @@ Now we have a critical issue in rendering: at each point in the image, what colo
 Each time the camera generates a ray, the first thing the renderer does is determine which object (if any) the ray intersects with. To find the intersection we must test the intersection of the ray with every object in the room and pick the first one. This will be done with the following equation:
 
 Given a ray $r$, we'll start writing it in it's parametric form:
-$$
+```math
 r(t) = o + t\mathbf{d}
-$$
+```
 where $o$ is the ray's origin, $\mathbf{d}$ is the direction vector and $t$ is a parameter such that $t \in [0,\infty)$
 
 
