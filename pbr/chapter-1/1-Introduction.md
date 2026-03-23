@@ -21,8 +21,21 @@ Each time the camera generates a ray, the first thing the renderer does is deter
 
 Given a ray $r$, we'll start writing it in it's parametric form:
 ```math
-r(t) = o + t\mathbf{d}
+r(t) = \mathbf{o} + t\mathbf{d}
 ```
-where $o$ is the ray's origin, $\mathbf{d} \in \mathbb{R}^3$ is the direction vector and $t$ is a parameter such that $t \in [0,\infty)$
+where $\mathbf{o} \in \mathbb{R}^3$ is the ray's origin, $\mathbf{d} \in \mathbb{R}^3$ is the direction vector and $t$ is a parameter such that $t \in [0,\infty)$.
+
+It is often easy to find the intersection between a ray $r$ and an object by the defining the implicit function $F(x,y,z) = 0$. We then substitute the ray $r$ into the equation to define
+a function whose parameter is only $t$
+
+```math
+x^2 + y^2 + z^2 - r^2 = 0
+```
+Substituting the ray equation
+
+```math
+f(t) = (\mathbf{o}_x + t\mathbf{d}_x)^2 + (\mathbf{o}_y + t\mathbf{d}_y)^2 + (\mathbf{o}_z + t\mathbf{d}_z)^2 - r^2 = 0,
+```
+If this quadratic equation doesn't have real solutions then the ray does not hit the sphere, if has solutions, then the smallest positive root gives the intersection point sphere.
 
 
