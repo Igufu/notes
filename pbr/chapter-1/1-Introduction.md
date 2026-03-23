@@ -14,10 +14,16 @@ The main idea of **Ray tracing** is simple, we'll simply follow each light ray a
 ## Cameras and film
 <img width="821" height="338" alt="imagen" src="https://github.com/user-attachments/assets/9aae713b-3756-4602-9aba-9cd5004ae250" />
 
-Now we have a critical issue in rendering: at each point in the image, what color does the camera record? This question is partially answered
-by what is visible in the camera, above there is a diagram of the pinhole camera model, where we can see that only vectors that travel through the pinhole
-are "rendered" in the scene. We will go on detail about this later.
+Now we have a critical issue in rendering: at each point in the image, what color does the camera record? This question is partially answered by what is visible in the camera, above there is a diagram of the pinhole camera model, where we can see that only vectors that travel through the pinhole are "rendered" in the scene. We will go on detail about this later.
 
+## Ray-Object Intersection
+Each time the camera generates a ray, the first thing the renderer does is determine which object (if any) the ray intersects with. To find the intersection we must test the intersection of the ray with every object in the room and pick the first one. This will be done with the following equation:
+
+Given a ray $r$, we'll start writing it in it's parametric form:
+$$
+r(t) = o + t\mathbf{d}
+$$
+where $o$ is the ray's origin, $\mathbf{d}$ is the direction vector and $t$ is a parameter such that $t \in [0,\infty)$
 
 
 
