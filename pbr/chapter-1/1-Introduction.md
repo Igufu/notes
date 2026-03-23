@@ -23,7 +23,6 @@ Given a ray $r$, we'll start writing it in it's parametric form:
 ```math
 r(t) = o + t\mathbf{d}
 ```
-where $o$ is the ray's origin, $\mathbf{d}$ is the direction vector and $t$ is a parameter such that $t \in [0,\infty)$
-
+where $o$ is the ray's origin, $\mathbf{d} \in \mathbb{R}^3$ is the direction vector and $t$ is a parameter such that $t \in [0,\infty)$
 
 
